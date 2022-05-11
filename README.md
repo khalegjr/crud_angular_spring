@@ -2,6 +2,8 @@
 
 Frontend do projeto da [Loiane Groner](https://www.youtube.com/c/loianegroner) de Angular + Spring Boot, para aprendizado de Angular e Java/SpringBoot.
 
+O backend, em **Spring Boot**, está no repositório [Crud-Spring](https://github.com/khalegjr/crud-spring)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
