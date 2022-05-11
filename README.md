@@ -1,6 +1,6 @@
-# CrudAngular
+# CrudAngular + Spring
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+Frontend do projeto da [Loiane Groner](https://www.youtube.com/c/loianegroner) de Angular + Spring Boot, para aprendizado de Angular e Java/SpringBoot.
 
 ## Development server
 
