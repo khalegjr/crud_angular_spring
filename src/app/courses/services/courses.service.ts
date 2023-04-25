@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { delay, first, tap } from "rxjs";
+import { Observable, delay, first, tap } from "rxjs";
 
 import { Course } from "../model/course";
 
@@ -8,10 +8,10 @@ import { Course } from "../model/course";
   providedIn: "root",
 })
 export class CoursesService {
-  private readonly API = "api/courses";
+  private readonly API = "/assets/courses.json";
   constructor(private httpClient: HttpClient) {}
 
-  list() {
+  list(): Observable<Course[]> {
     return this.httpClient.get<Course[]>(this.API).pipe(
       first(),
       delay(5000),
