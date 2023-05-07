@@ -11,7 +11,7 @@ export class CategoryPipe implements PipeTransform {
       case "back-end":
         return "computer";
       default:
-        return "laptop";
+        return "all_inclusive";
     }
   }
 }
