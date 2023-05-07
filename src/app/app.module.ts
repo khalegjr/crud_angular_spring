@@ -6,9 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CategoryPipe } from './shared/pipes/category.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CategoryPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
