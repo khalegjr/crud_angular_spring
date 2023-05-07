@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
+import { Observable, catchError, of } from "rxjs";
 import { CoursesService } from "./../services/courses.service";
 
+import { MatSnackBar } from "@angular/material/snack-bar";
 import { Course } from "./../model/course";
 
 @Component({
@@ -14,8 +15,21 @@ export class CoursesComponent implements OnInit {
 
   displayedColumns = ["name", "category"];
 
-  constructor(private coursesService: CoursesService) {
-    this.courses$ = this.coursesService.list();
+  constructor(
+    private coursesService: CoursesService,
+    public snackBar: MatSnackBar
+  ) {
+    this.courses$ = this.coursesService.list().pipe(
+      catchError((error) => {
+        console.log(error);
+        this.onError("Erro ao carregar cursos.");
+        return of([]);
+      })
+    );
+  }
+
+  onError(errorMsg: string) {
+    this.snackBar.open(errorMsg, "Fechar");
   }
 
   ngOnInit(): void {}
