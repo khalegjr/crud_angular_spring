@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Observable, catchError, of } from "rxjs";
 import { CoursesService } from "./../services/courses.service";
 
-import { MatLegacySnackBar as MatSnackBar } from "@angular/material/legacy-snack-bar";
+import { MatSnackBar } from "@angular/material/snack-bar";
 import { Course } from "./../model/course";
 
 @Component({
